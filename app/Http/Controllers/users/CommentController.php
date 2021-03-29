@@ -43,7 +43,7 @@ class CommentController extends Controller
                 return redirect()->back()->with(['error'=>'no comment found']);
             }
 
-            return view('users\items\editComment',compact('comment'));
+            return view('users.items.editComment',compact('comment'));
 
         } catch (\Exception $ex) {
             return Redirect::to('items/get')->with(['error'=>'Something went wrong']);

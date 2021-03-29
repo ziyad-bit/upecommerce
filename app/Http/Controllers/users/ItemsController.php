@@ -125,11 +125,11 @@ class ItemsController extends Controller
             $items = $items->paginate(3);
 
             if ($request->has('agax')) {
-                $view = view('users\items\allItems', compact('items'))->render();
+                $view = view('users.items.allItems', compact('items'))->render();
                 return response()->json(['html' => $view]);
             }
 
-            return view('users\items\show',
+            return view('users.items.show',
                     compact('items', 'search', 'price', 'selected_category', 'category','brands','selected_brands'));
 
         } catch (\Exception $th) {
@@ -163,17 +163,17 @@ class ItemsController extends Controller
                     ]);
     
                     $msg='the operation is finished successfully';
-                    return view('users\items\details', compact('item', 'comments','msg'));
+                    return view('users.items.details', compact('item', 'comments','msg'));
                 } else {
                     $error='the operation is failed';
-                    return view('users\items\details', compact('item', 'comments','error'));
+                    return view('users.items.details', compact('item', 'comments','error'));
                 }
     
             }
             
             
             if ($request->has('agax')) {
-                $view = view('users\items\comments', compact('comments'))->render();
+                $view = view('users.items.comments', compact('comments'))->render();
                 return response()->json(['html' => $view]);
             }
     
@@ -240,7 +240,7 @@ class ItemsController extends Controller
             $res=json_decode($responseData,true);
             $item_id=$request->item_id;
     
-            $view=view('users\items\checkout',compact('res','item_id'))->render();
+            $view=view('users.items.checkout',compact('res','item_id'))->render();
     
             return response()->json(['form'=>$view]);
         } catch (\Exception $th) {

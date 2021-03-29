@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 class AdminsController extends Controller
 {
     public function getLogin(){
-        return view('admins\auth\login');
+        return view('admins.auth.login');
     }
 
     public function login(Request $request){
@@ -24,7 +24,7 @@ class AdminsController extends Controller
     }
 
     public function getDashboard(){
-        return view('admins\auth\dashboard');
+        return view('admins.auth.dashboard');
     }
 
     public function logout(){

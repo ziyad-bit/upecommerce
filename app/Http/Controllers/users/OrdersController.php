@@ -21,7 +21,7 @@ class OrdersController extends Controller
             $orders=Orders::with('items')->selection()->where('user_id',Auth::user()->id)
                         ->orderBy('id','desc')->get();
 
-            return view('users\orders\show',compact('orders'));
+            return view('users.orders.show',compact('orders'));
 
         } catch (\Exception $ex) {
             return redirect()->back()->with(['error'=>'Something went wrong']);

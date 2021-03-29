@@ -30,7 +30,7 @@ class CategoryController extends Controller
 
             $category_items = $category->items;
             
-            return view('users\category\show',compact('category_items','category'));
+            return view('users.category.show',compact('category_items','category'));
 
         } catch (\Exception $ex) {
             return Redirect::to('category/get')->with(['error'=>'something went wrong']);

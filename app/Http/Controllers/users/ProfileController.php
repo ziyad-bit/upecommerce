@@ -31,7 +31,7 @@ class ProfileController extends Controller
             $user_items=User::find(Auth::user()->id)->items;
             $categories=Category::where('translation_lang',defaultLang())->get();
 
-            return view('users\profile\show',compact('user_items','categories'));
+            return view('users.profile.show',compact('user_items','categories'));
 
         } catch (\Exception $th) {
             return Redirect::to('/')->with(['error'=>'Something went wrong']);
