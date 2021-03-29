@@ -118,7 +118,7 @@
 
     {{--#################       comments     ########################--}}
     <div id="more">
-        @include('users\items\comments')
+        @include('users.items.comments')
         
     </div>
     

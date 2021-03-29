@@ -84,7 +84,7 @@
 
     {{--   items      --}}
     
-        @include('users\items\allItems')
+        @include('users.items.allItems')
     
 </div>
 
