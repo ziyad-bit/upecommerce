@@ -24,7 +24,7 @@ Route::group(['prefix' => 'items','namespace'=>'users'], function () {
     Route::get    ('/create'                , 'ItemsController@index');
     Route::get    ('/comments/{id}'         , 'ItemsController@comInfiniteScroll');
     Route::get    ('/get/checkout'          , 'ItemsController@getCheckout');
-    Route::get    ('/details/{slug}'   , 'ItemsController@showDetails')->name('item.details');
+    Route::get    ('/details/{slug}'        , 'ItemsController@showDetails')->name('item.details');
     Route::get    ('/edit/item'             , 'ItemsController@editItem');
     Route::any    ('/get'                   , 'ItemsController@show')->name('item.get');
     Route::post   ('/post'                  , 'ItemsController@create')->name('items.insert');
@@ -67,3 +67,4 @@ Route::group(['prefix' => 'notifications','namespace'=>'users'], function () {
     Route::get   ('/show'         , 'NotificationsController@show');
     Route::post  ("/update"       , 'NotificationsController@update');
 });
+
