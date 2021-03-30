@@ -2,7 +2,7 @@
 @foreach ($items as $item)
 
     <div  class="col-sm-3" id="more_items">
-        <a class="btn btn-primary" href="{{url('items/create')}}">add item</a>
+        
         <div class="card" style="width: 14rem;">
             <img src="{{ asset('images/items/' . $item->photo) }}" class="card-img-top" alt="...">
             <div class="card-body">
