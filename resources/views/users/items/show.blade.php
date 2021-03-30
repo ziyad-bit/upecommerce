@@ -8,7 +8,7 @@
 
 @section('content')
 <h1 class="text-center">items</h1>
-<a class="btn btn-primary" href="{{url('items/create')}}">add item</a>
+<a class="btn btn-primary" style="margin-bottom: 15px" href="{{url('items/create')}}">add item</a>
 <div class="row">
     <div class="col-sm-3 ">
         
