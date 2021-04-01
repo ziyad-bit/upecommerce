@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('header')
+<title>{{ env('APP_NAME',  'home - zikolaravelecommerce') }}</title>
+<meta name="keywords" content="here you can see home page in zikolaravelecommerce" >
+<link href="{{ asset('css/users/profile.css') }}" rel="stylesheet">
+@endsection
+
 @section('content')
 <div class="container">
     @if (session('resent'))

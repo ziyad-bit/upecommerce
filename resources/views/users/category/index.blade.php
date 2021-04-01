@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('header')
-<title>{{ env('APP_NAME',  'categories - ecommerce') }}</title>
-<meta name="keywords" content="here you can see all categories" >
+<title>{{ env('APP_NAME',  'categories - zikolaravelecommerce') }}</title>
+<meta name="keywords" content="here you can see all categories in zikolaravelecommerce" >
 @endsection
 
 @section('content')

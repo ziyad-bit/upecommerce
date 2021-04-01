@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('header')
-    <title>{{ env('APP_NAME', 'edit - comment - ecommerce') }}</title>
+    <title>{{ env('APP_NAME', 'edit - comment - zikolaravelecommerce') }}</title>
     <meta name="keywords" content="here you can edit your comment">
 @endsection
 

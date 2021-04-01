@@ -99,7 +99,7 @@ class ItemsController extends Controller
             }
 
             if ($price != null) {
-                $items = $items->when($price, function ($q) use ($price) {
+                $items = $items->when($price, function ($q,$price)  {
                     if ($price == "price_0_500") {
                         $q->whereBetween('price', [0, 500]);
                     }
