@@ -122,7 +122,7 @@ class ItemsController extends Controller
                 $items=Items::whereIn('brand_id',$selected_brands);
             }
 
-            $items = $items->paginate(3);
+            $items = $items->orderBy('id','desc')->paginate(3);
 
             if ($request->has('agax')) {
                 $view = view('users.items.allItems', compact('items'))->render();

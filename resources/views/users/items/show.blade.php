@@ -83,9 +83,9 @@
     
 
     {{--   items      --}}
-    
+    <div id="more_items">
         @include('users.items.allItems')
-    
+    </div>
 </div>
 
 <div id="load" style="margin-top: 30px" class="text-center"  style="display: none">
@@ -96,6 +96,6 @@
 @endsection
 @section('script')
     <script>
-       function loadMore(e){let t=new XMLHttpRequest;t.onreadystatechange=function(){if(4==this.readyState&&200==this.status){let e=JSON.parse(this.responseText).html,t=document.getElementById("load");if(""==e)return void(t.textContent="no more items");document.getElementById("more_items").insertAdjacentHTML("afterend",e),t.style.display="none"}};let n=document.getElementById("filter_form"),o=new FormData(n);o.append("agax",1),t.open("post","?page="+e),t.send(o)}let page=1;window.onscroll=function(){window.scrollY+window.innerHeight>=document.body.clientHeight&&(document.getElementById("load").style.display="",loadMore(++page))};
+      function loadMore(e){let t=new XMLHttpRequest;t.onreadystatechange=function(){if(4==this.readyState&&200==this.status){let e=JSON.parse(this.responseText).html,t=document.getElementById("load");if(""==e)return void(t.textContent="no more items");document.getElementById("more_items").innerHTML+=e,t.style.display="none"}};let n=document.getElementById("filter_form"),o=new FormData(n);o.append("agax",1),t.open("post","?page="+e),t.send(o)}let page=1;window.onscroll=function(){window.scrollY+window.innerHeight>=document.body.clientHeight&&(document.getElementById("load").style.display="",loadMore(++page))};
     </script>
 @endsection
